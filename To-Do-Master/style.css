@@ -1,0 +1,193 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #1a478b;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 800px;
+  margin: 50px auto;
+  background-color: #f4f4f4;
+  border-radius: 8px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
+
+.heading {
+  color: #333;
+  font-size: 32px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.input-container input[type="text"],
+.input-container select,
+.input-container input[type="date"],
+.input-container .addBtn,
+.clearBtn {
+  margin-right: 10px;
+  margin-bottom: 10px;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  flex: 1;
+}
+
+.input-container .addBtn,
+.clearBtn {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.input-container .addBtn:hover {
+  background-color: #0056b3;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+ul li {
+  cursor: pointer;
+  padding: 12px 8px;
+  background: hsl(220, 17%, 93%);
+  border-bottom: 1px solid #eee;
+  transition: background-color 0.3s;
+  gap: 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+ul li:last-child {
+  border-bottom: none;
+}
+
+ul li:hover {
+  background: #e3e3e3;
+}
+
+ul li.checked {
+  background: #f2f2f2;
+  color: #888;
+  text-decoration: line-through;
+}
+
+.task-name {
+  flex: 1;
+  margin-right: 10px;
+  color: #333; /* Dark text color */
+}
+
+.priority {
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.low {
+  background-color: #e6d435;
+  color: #29031c;
+}
+
+.medium {
+  background-color: #ff9800;
+  color: #29031c;
+}
+.high {
+  background-color: #18a347;
+  color: #29031c;
+}
+
+.due-date {
+  font-size: 12px;
+  color: black;
+}
+
+/* Edit and Delete button styles */
+.editBtn {
+  background-color: #3d7bbd;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 12px;
+  margin-left: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.editBtn:hover {
+  background-color: #0056b3;
+  color: white;
+}
+
+.deleteBtn {
+  background-color: rgb(235, 89, 89);
+  color: black;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 12px;
+  margin-left: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.deleteBtn:hover {
+  background-color: #d61912;
+  color: white;
+}
+
+.taskCount {
+  padding: auto;
+}
+.clearContainer {
+  display: flex;
+  width: 50%;
+  justify-content: center;
+  align-items: center;
+  margin-left: 30%;
+}
+
+@media screen and (max-width: 600px) {
+  .input-container {
+    flex-direction: column;
+  }
+
+  .input-container input[type="text"],
+  .input-container select,
+  .input-container input[type="date"],
+  .input-container .addBtn {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .date-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .clearContainer {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      description="To-Do List application designed to streamline your task management process effortlessly."
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>To-Do-Master (Todo list app)</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="heading">My To-Do List</h1>
+      <form class="input-container">
+        <input type="text" id="myInput" placeholder="Add a new task..." />
+        <div class="date-container">
+          <input type="date" id="dueDateInput" />
+          <select id="prioritySelect">
+            <option value="low">Low Priority</option>
+            <option value="medium">Medium Priority</option>
+            <option value="high">High Priority</option>
+          </select>
+        </div>
+        <button type="button" onclick="newElement()" class="addBtn">Add</button>
+      </form>
+
+      <ul id="myUL"></ul>
+
+      <div class="clearContainer">
+        <button id="clearAllBtn" class="clearBtn">Clear All Tasks</button>
+
+        <span id="taskCount" class="taskCount">Total Tasks: 0</span>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
